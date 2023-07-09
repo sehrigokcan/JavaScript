@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .red {
+        background-color: red;
+      }
+      .blue {
+        background-color: blue;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .text-style {
+        color: green;
+        text-shadow: 3px 3px 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="txtName" value="Sehri Hanim" />
+    <button onclick="sayHello()">Say Hello</button>
+    <h3 id="lblMessage">...</h3>
+    //tagin textine ulasmak icin innerText
+
+    <p id="pEI" class="red text-center">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla deleniti
+      iusto dignissimos veritatis consequuntur quaerat, quia laborum quae
+      corporis. Sunt totam assumenda quas rem natus saepe dolor distinctio odio
+      tempore.
+    </p>
+    <script>
+      const txtName = document.querySelector("#txtName");
+      const lblMessage = document.querySelector("#lblMessage");
+
+      function sayHello() {
+        lblMessage.innerText = `Merhaba ${txtName.value}`;
+      }
+    </script>
+  </body>
+</html>

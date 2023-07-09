@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-    <h1>
-        Hello World!
-    </h1>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
 
-    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam totam, ratione corporis labore alias incidunt deleniti eaque, natus dignissimos ipsum dolor veniam enim. Atque rerum incidunt soluta tempore dicta quis.</p>
-<ul class=""menu> 
+    <p class="'desc">
+      Lorem ipsum dolor sit amet <b>consectetur</b> adipisicing elit. Quibusdam
+      totam, ratione corporis labore alias incidunt deleniti eaque, natus
+      dignissimos ipsum dolor veniam enim. Atque rerum incidunt soluta tempore
+      dicta quis.
+    </p>
+    <ul class="menu">
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
 
-<li>Home</li>
-<li>About</li>
-<li>Contact</li>
-</ul>
+    <script>
+      const e1H1 = document.querySelector("h1"); // istedigin elemani secip bulru
+      console.log(e1H1.innerText); //Hello World
 
+      e1H1.innerText = "Hello <em>Javascript</em>";
+      e1H1.innerHTML = "Hello <em>Javascript</em>"; // farkli taglarla degisiklik yapilabilir
 
-<script>
-    const e1H1= document.querySelector("h1");
+      const elHome = document.querySelector(".menu li:first-child");
+      elHome.innerText = "Ana Sayfa";
 
-    console.log(e1H1);
+      const elDesc = document.querySelector(".desc");
+      console.log(elDesc.innerHTML); // sadece texti gosterir
+      console.log(elDesc.innerText); // taglarla beraber gosterir
 
-    
-</script>
-</body>
+      const allH1 = document.querySelectorAll("h1");
+      console.log(allH1); //NodeList(2) [h1,h1]
+
+      // innertext
+    </script>
+  </body>
 </html>
