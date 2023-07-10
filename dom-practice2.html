@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --colorDark: rgba(0, 0, 0, 0.454);
+        --colorLight: rgba(255, 255, 255, 0.514);
+      }
+      body .dark button {
+        color: var(--colorDark);
+        background-color: var(--colorLight);
+      }
+      body.dark {
+        background-color: rgba(0, 0, 0, 0.454);
+        color: rgba(255, 255, 255, 0.514);
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btnSum" onclick="setMode()">Dark</button>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
+      provident odio voluptas, dolore neque est eaque molestiae iure minima,
+      iste ipsam. Ab iure vero voluptatem voluptates quisquam consectetur
+      temporibus amet?
+    </p>
+
+    <script>
+      let mode = "light";
+
+      function setMode() {
+        if (mode === "light") {
+          document.querySelector("body").classList.add("dark");
+          mode = "dark";
+        } else {
+          document.querySelector("body").classList.remove("dark");
+          mode = "light";
+        }
+      }
+    </script>
+  </body>
+</html>

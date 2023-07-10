@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --colorDark: rgba(0, 0, 0, 0.454);
+        --colorLight: rgba(255, 255, 255, 0.514);
+      }
+      body .dark button {
+        color: var(--colorDark);
+        background-color: var(--colorLight);
+      }
+      body.dark {
+        background-color: rgba(0, 0, 0, 0.454);
+        color: rgba(255, 255, 255, 0.514);
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="txt" />
+
+    <button id="btnSum" onclick="result()">Hesapla</button>
+
+    <h3 id="result"></h3>
+    <script>
+      let price = document.querySelector("#txt").value;
+      let discount;
+      function result() {
+        if (price > 500) {
+          discount = 10;
+        } else if (price > 300) {
+          discount = 5;
+        } else {
+          discount = 5;
+        }
+        price = price - (price * discount) / 100;
+        document.querySelector("#result").innerHTML = `$${price}`;
+      }
+    </script>
+  </body>
+</html>
